@@ -31,9 +31,9 @@ jobs:
       with:
         #aws-access-key-id: AKIAY4YMHWOQLNOW5I6E
         #aws-secret-access-key: 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
-        aws-region: ap-south-1
+        #aws-region: ap-south-1
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        #aws-region: ${{ env.AWS_REGION }}
+        aws-region: ${{ env.AWS_REGIONS }}
     - name: Deploy
       run: aws s3 sync ./dist s3://mytests3hosting
